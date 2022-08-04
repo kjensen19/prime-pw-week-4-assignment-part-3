@@ -18,12 +18,11 @@ console.log('Should be 5', maxItems);
 //   - Use the `isFull` function to prevent more than `maxItems` from being added to the basket. 
 //   - If an item was added to the array, return `true`
 //   - If there was no room and the item could not be added return `false`
-function addItem(cont, item){
-    if(isFull(cont) === false){
+function addItem(cont, item) {
+    if (isFull(cont) === false) {
         cont.push(item);
         return true
-    }
-    else{
+    } else {
         return false;
     }
     
@@ -33,7 +32,7 @@ function addItem(cont, item){
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
 function listItems(){
-    for(item of basket){
+    for(let item of basket){
         console.log(item);
     }
 }
@@ -48,7 +47,7 @@ function empty(cont){
 //   - return `false` if the basket contains *less* than max number of items
 //   - return `true` otherwise (equal or more than maxItems)
 function isFull(cont){
-    if (cont.length < maxItems){
+    if (cont.length < maxItems) {
         return false;
     }
     else{
@@ -56,8 +55,14 @@ function isFull(cont){
     }
 };
 
+function removeItem(cont, item){
+    let removed = cont.indexOf(item);
+    if (removed === -1) {
+        return 'null';
+    } else {
 
-
+    }
+}
 
 
 
