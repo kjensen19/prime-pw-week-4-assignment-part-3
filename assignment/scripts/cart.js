@@ -32,7 +32,7 @@ function addItem(cont, item) {
 //   - loop over the items in the `basket` array
 //   - console.log each individual item on a new line
 function listItems(){
-    for(let item of basket){
+    for (let item of basket) {
         console.log(item);
     }
 }
@@ -56,11 +56,11 @@ function isFull(cont){
 };
 
 function removeItem(cont, item){
-    let removed = cont.indexOf(item);
-    if (removed === -1) {
+    let remIndex = cont.indexOf(item);
+    if (remIndex === -1) {
         return 'null';
     } else {
-
+        return cont.splice(remIndex, 1)
     }
 }
 
@@ -73,15 +73,19 @@ console.log('Adding apples (expect true)', addItem(basket, 'apples'));
 console.log(`Basket is now ${basket}`);
 empty(basket);
 console.log(`Expect empty: Basket is ${basket}`);
-console.log('Adding item, should return true', addItem(basket, 'pear'))
-console.log("false =", isFull(basket))
-console.log('Adding item, should return true', addItem(basket, 'watermelon'))
-console.log("false =", isFull(basket))
-console.log('Adding item, should return true', addItem(basket, 'banana'))
-console.log('false =', isFull(basket))
-console.log('Adding item, should return true', addItem(basket, 'peach'))
-console.log("false =", isFull(basket))
-console.log('Adding item, should return true', addItem(basket, 'milk'))
-console.log('true =', isFull(basket))
-console.log('Adding item, should return false', addItem(basket, 'bread'))
-console.log('true =', isFull(basket))
+console.log('Adding item, should return true', addItem(basket, 'pear'));
+console.log("false =", isFull(basket));
+console.log('Adding item, should return true', addItem(basket, 'watermelon'));
+console.log("false =", isFull(basket));
+console.log('Adding item, should return true', addItem(basket, 'banana'));
+console.log('false =', isFull(basket));
+console.log('Adding item, should return true', addItem(basket, 'peach'));
+console.log("false =", isFull(basket));
+console.log('Adding item, should return true', addItem(basket, 'milk'));
+console.log('true =', isFull(basket));
+console.log('Adding item, should return false', addItem(basket, 'bread'));
+console.log('true =', isFull(basket));
+console.log(`basket = ${basket}`);
+console.log(`removed item = ${removeItem(basket, 'pear')}`);
+console.log(`removed item = ${removeItem(basket, 'goat')}`);
+console.log(`basket = ${basket}`);
