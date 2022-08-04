@@ -25,8 +25,6 @@ function addItem(cont, item) {
     } else {
         return false;
     }
-    
-
 }
 // - Create a function called `listItems`. It should:
 //   - loop over the items in the `basket` array
