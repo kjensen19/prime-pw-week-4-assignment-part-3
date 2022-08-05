@@ -21,7 +21,7 @@ console.log('Should be 5', maxItems);
 function addItem(cont, item) {
     if (isFull(cont) === false) {
         cont.push(item);
-        return true
+        return true;
     } else {
         return false;
     }
@@ -48,16 +48,16 @@ function isFull(cont) {
     if (cont.length < maxItems) {
         return false;
     } else {
-        return true
+        return true;
     }
 };
 
-function removeItem(cont, item){
+function removeItem(cont, item) {
     let remIndex = cont.indexOf(item);
     if (remIndex === -1) {
         return 'null';
     } else {
-        return cont.splice(remIndex, 1)
+        return cont.splice(remIndex, 1);
     }
 };
 
