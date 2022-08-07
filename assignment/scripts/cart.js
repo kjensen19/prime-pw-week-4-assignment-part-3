@@ -38,7 +38,7 @@ function listItems(cont) {
 //   - reset the `basket` to an empty array
 function empty(cont) {
     cont.splice(0, cont.length);
-    console.log('in empty, should zero arr', cont)
+    console.log('in empty, should zero arr', cont);
     console.log('basket in empty', basket);
 };
 // 2. Create a function called isFull(). It should:
